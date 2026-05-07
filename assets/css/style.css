@@ -171,7 +171,7 @@ html{
 body{
   background-color: var(--eerie-black-1);
   color: var(--white);
-  font-family: var(--fontFamily-dm_sans);
+  font-family: var(--fontFamily-dm_sans); 
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
@@ -208,10 +208,43 @@ body.nav-active{overflow: hidden;}
   #PRELOAD
 \*-----------------------------------*/
 
+.preload{
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gold-crayola);
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  transition: var(--transition-2);
+}
 
+.preload >* {transition: var(--transition-1);}
 
+.preload.loaded >* {opacity: 0;}
 
+.preload.loaded {
+  transition-delay: 250ms;
+  transform: translate(100%);
+}
+ 
+.circle{
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radius-circle);
+  border: 3px solid var(--white);
+  border-block-start-color: var(--smoky-black-3);
+  margin-bottom: 45px;
+  animation: rotate360 1s linear infinite;
+}
 
+@keyframes rotate360{
+  0% { transform: rotate(0);}
+  100% { transform: rotate(1turn);}
+}
 /*-----------------------------------*\
   #TOPBAR
 \*-----------------------------------*/
