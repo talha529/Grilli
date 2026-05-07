@@ -219,9 +219,13 @@ body.nav-active{overflow: hidden;}
   display: grid;
   place-content: center;
   justify-content: center;
+
   transition: var(--transition-2);
 }
 
+.text{
+  text-align: center;
+}
 .preload >* {transition: var(--transition-1);}
 
 .preload.loaded >* {opacity: 0;}
@@ -244,6 +248,27 @@ body.nav-active{overflow: hidden;}
 @keyframes rotate360{
   0% { transform: rotate(0);}
   100% { transform: rotate(1turn);}
+}
+
+.text{
+  background-image: var(--loading-text-gradient);
+  background-size: 200%;
+  font-size: calc(2rem+3vm);
+  font-weight: var(--weight-bold);
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  padding-inline-start: 16px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5px var(--eerie-black-3);
+  animation: loadingText linear 2s infinite;
+}
+
+@keyframes loadingText{
+  0% {background-position: 190%;}
+  100%{background-position: 0%;}
 }
 /*-----------------------------------*\
   #TOPBAR
