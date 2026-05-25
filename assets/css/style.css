@@ -216,10 +216,10 @@ body.nav-active{overflow: hidden;}
   bottom: 0;
   background-color: var(--gold-crayola);
   z-index: 10;
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-
   transition: var(--transition-2);
 }
 
@@ -232,12 +232,12 @@ body.nav-active{overflow: hidden;}
 
 .preload.loaded {
   transition-delay: 250ms;
-  transform: translate(100%);
+  transform: translateY(100%);
 }
  
 .circle{
-  width: 112px;
-  height: 112px;
+  width: 96px;
+  height: 93px;
   border-radius: var(--radius-circle);
   border: 3px solid var(--white);
   border-block-start-color: var(--smoky-black-3);
