@@ -226,12 +226,15 @@ body.nav-active{overflow: hidden;}
 .text{
   text-align: center;
 }
-.preload >* {transition: var(--transition-1);}
+.preload >* {transition: var(--transition-2);
+  transition-delay: 350ms;
+
+}
 
 .preload.loaded >* {opacity: 0;}
 
 .preload.loaded {
-  transition-delay: 250ms;
+  transition-delay: 650ms;
   transform: translateY(100%);
 }
  
