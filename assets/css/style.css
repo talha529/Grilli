@@ -193,7 +193,27 @@ body.nav-active{overflow: hidden;}
 \*-----------------------------------*/
 
 
+.display-1,
+.healine-1,
+.headline-2,
+.title-1,
+.title-2,
+.title-3,
+.title-4{
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-2);
+}
 
+.display-1{
+  font-size: var(--fontSize-display-1);
+  line-height: var(--lineHeight-1);
+}
+
+.headline-1{
+  font-size: ;
+}
 
 
 /*-----------------------------------*\
@@ -222,8 +242,8 @@ body.nav-active{overflow: hidden;}
   max-width: max-content;
 }
 
-.hover-underline{
-  content: "";
+.hover-underline::after{
+  content: ""; 
   position: absolute;
   left: 0;
   bottom: 0;
@@ -239,6 +259,8 @@ body.nav-active{overflow: hidden;}
   transform: scaleX(1);
   opacity: 1;
 }
+
+.contact-number::after{ bottom: -5px;}
 
 /*-----------------------------------*\
   #PRELOAD
