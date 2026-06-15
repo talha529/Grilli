@@ -395,6 +395,20 @@ body.nav-active{overflow: hidden;}
   background-color: var(--eerie-black-4);
   border-color: var(--black-alpha-15);
 }
+
+.header.hide{
+  transform: translateY(-100%);
+  transition-delay: 250ms;
+}
+
+.header .container {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
